@@ -314,7 +314,14 @@ namespace g4
                    Math.Abs(z - v2.z) <= epsilon;
         }
 
-
+        public static Vector3d Round(Vector3d vin,int digits)
+        {
+            return new Vector3d(
+                Math.Round(vin.x,digits),
+                Math.Round(vin.y,digits),
+                Math.Round(vin.z,digits)
+                );
+        }
         public static Vector3d Lerp(Vector3d a, Vector3d b, double t) {
             double s = 1 - t;
             return new Vector3d(s * a.x + t * b.x, s * a.y + t * b.y, s * a.z + t * b.z);
